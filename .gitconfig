@@ -1,6 +1,6 @@
 [user]
-    name = Gary Bernhardt
-    email = gary.bernhardt@gmail.com
+    name = Josh Vandergrift 
+    email = joshmattvander@gmail.com 
 [diff]
 [color]
     ui = auto
@@ -31,5 +31,7 @@
     dh1 = diff HEAD~1
 
 [merge]
-    tool = vimdiff
+    tool = filemerge
 
+[core]
+	editor = mvim -f

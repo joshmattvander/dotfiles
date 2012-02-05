@@ -520,7 +520,7 @@ endfunction
 
 map <leader>t :call RunTestFile()<cr>
 map <leader>T :call RunNearestTest()<cr>
-map <leader>a :call RunTests('')<cr>
+" map <leader>a :call RunTests('')<cr>
 map <leader>c :w\|:!cucumber<cr>
 map <leader>w :w\|:!cucumber --profile wip<cr>
 
@@ -595,10 +595,10 @@ imap <c-c> <esc>
 
 command! InsertTime :normal a<c-r>=strftime('%F %H:%M:%S.0 %z')<cr>
 
-map <Left> :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up> :echo "no!"<cr>
-map <Down> :echo "no!"<cr>
+" map <Left> :echo "no!"<cr>
+" map <Right> :echo "no!"<cr>
+" map <Up> :echo "no!"<cr>
+" map <Down> :echo "no!"<cr>
 
 function! PromoteToLet()
   :normal! dd
@@ -617,3 +617,12 @@ endfunction
 " Indent p tags
 autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
 
+" Show line numbers
+set nu
+
+" Line bubbling
+nmap <C-Up> ddkP
+nmap <C-Down> ddp
+" Bubbling multiple lines
+vmap <C-Up> xkP`[V`]
+vmap <C-Down> xp`[V`]
