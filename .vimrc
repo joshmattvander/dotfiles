@@ -595,10 +595,10 @@ imap <c-c> <esc>
 
 command! InsertTime :normal a<c-r>=strftime('%F %H:%M:%S.0 %z')<cr>
 
-" map <Left> :echo "no!"<cr>
-" map <Right> :echo "no!"<cr>
-" map <Up> :echo "no!"<cr>
-" map <Down> :echo "no!"<cr>
+map <Left> :echo "no!"<cr>
+map <Right> :echo "no!"<cr>
+map <Up> :echo "no!"<cr>
+map <Down> :echo "no!"<cr>
 
 function! PromoteToLet()
   :normal! dd
@@ -626,3 +626,14 @@ nmap <C-Down> ddp
 " Bubbling multiple lines
 vmap <C-Up> xkP`[V`]
 vmap <C-Down> xp`[V`]
+"
+vmap <C-i> yyP
+
+" Folding
+set foldmethod=syntax
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+
+" wrapping
+set nowrap

@@ -5,6 +5,7 @@
 --type-add=vim=vimrc
 --type-add=js=json
 --type-set=css=sass
+--type-set=js=coffee
 
 # add types ack doesn't know about
 --type-set=MARKDOWN=md,mkd,markdown
