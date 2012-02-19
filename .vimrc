@@ -298,22 +298,24 @@ function! JumpToTestsForClass()
 endfunction
 
 let mapleader=","
-" nnoremap <leader>m :call RunTestsForFile('--machine-out')<cr>:redraw<cr>:call JumpToError()<cr>
-" nnoremap <leader>M :call RunTestsForFile('')<cr>
-" nnoremap <leader>a :call RunAllTests('--machine-out')<cr>:redraw<cr>:call JumpToError()<cr>
-" nnoremap <leader>A :call RunAllTests('')<cr>
+ nnoremap <leader>m :call RunTestsForFile('--machine-out')<cr>:redraw<cr>:call JumpToError()<cr>
+ nnoremap <leader>M :call RunTestsForFile('')<cr>
+ nnoremap <leader>a :call RunAllTests('--machine-out')<cr>:redraw<cr>:call JumpToError()<cr>
+ nnoremap <leader>A :call RunAllTests('')<cr>
 
-" nnoremap <leader>a :call RunAllTests('')<cr>:redraw<cr>:call JumpToError()<cr>
-" nnoremap <leader>A :call RunAllTests('')<cr>
+ nnoremap <leader>a :call RunAllTests('')<cr>:redraw<cr>:call JumpToError()<cr>
+ nnoremap <leader>A :call RunAllTests('')<cr>
 
-" nnoremap <leader>t :call RunAllTests('')<cr>:redraw<cr>:call JumpToError()<cr>
-" nnoremap <leader>T :call RunAllTests('')<cr>
+ nnoremap <leader>t :call RunAllTests('')<cr>:redraw<cr>:call JumpToError()<cr>
+ nnoremap <leader>T :call RunAllTests('')<cr>
 
-" nnoremap <leader>t :call JumpToTestsForClass()<cr>
+ nnoremap <leader>t :call JumpToTestsForClass()<cr>
 
 " highlight current line
 set cursorline
 
+"
+set nowrap
 set cmdheight=2
 
 " Don't show scroll bars in the GUI
