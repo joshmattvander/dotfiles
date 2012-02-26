@@ -1,4 +1,4 @@
-" This is Gary Bernhardt's .vimrc file
+"" This is Gary Bernhardt's .vimrc file
 "
 " Be warned: this has grown slowly over years and may not be internally
 " consistent.
@@ -146,8 +146,8 @@ endif
 
 " GRB: set the color scheme
 :set t_Co=256 " 256 colors
-:set background=dark
-:color grb256
+:set background=light
+:color solarized
 
 " GRB: hide the toolbar in GUI mode
 if has("gui_running")
@@ -321,6 +321,7 @@ set cmdheight=2
 " Don't show scroll bars in the GUI
 set guioptions-=L
 set guioptions-=r
+
 
 " Use <c-h> for snippets
 let g:NERDSnippets_key = '<c-h>'

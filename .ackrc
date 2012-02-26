@@ -1,12 +1,19 @@
 # lexically sort filenames
 --sort-files
-
---type-add=ruby=rake,haml
---type-add=vim=vimrc
+--type-add=css=.scss
+--type-add=ruby=.haml,.rake
+--type-add=js=.mustache
 --type-add=js=json
---type-set=css=sass
 --type-set=js=coffee
-
+--type-add=objc=.pch
+--type-set=xcode=.pbxproj,.pbxuser,.perspectivev3
+--type-set=ragel=.rl
+--type-set=nib=.xib
+--type-set=plist=.plist
+--type-set=tmstuff=.tmproj,.tm_build_errors
+--nonib
+--notmstuff
+--noxcode
 # add types ack doesn't know about
 --type-set=MARKDOWN=md,mkd,markdown
 --type-set=RDOC=rdoc
