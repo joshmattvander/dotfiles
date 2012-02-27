@@ -623,14 +623,24 @@ autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_inden
 " Show line numbers
 set nu
 
+" wrapping
+set nowrap
+
 " Line bubbling
 nmap <C-Up> ddkP
 nmap <C-Down> ddp
+
 " Bubbling multiple lines
 vmap <C-Up> xkP`[V`]
 vmap <C-Down> xp`[V`]
 "
 vmap <C-i> yyP
+
+" Indenting
+nmap <Right> >> 
+nmap <Left> << 
+vmap <Right> >>`[V`] 
+vmap <Left> <<`[V`] 
 
 " Folding
 set foldmethod=syntax
@@ -638,5 +648,15 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=1
 
-" wrapping
-set nowrap
+" Split Pane Navigation
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+
+noremap H ^
+noremap L $
+
+:map <leader>r :RunRuby<cr>
